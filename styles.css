@@ -1,0 +1,138 @@
+/* ---------------------------------- */
+/* 🎨 PALETA DE COLORES (VARIABLES)   */
+/* ---------------------------------- */
+:root {
+  --color-fondo-principal: #fffdf8; /* blanco marfil */
+  --color-texto-principal: #4a4036; /* marrón oscuro refinado */
+  --color-texto-secundario: #6b5e54; /* marrón cálido */
+  --color-acento: #b5a78a; /* beige neutro profundo */
+  --color-fondo-secundario: #c3c2aa; /* beige oliva */
+  --color-boton: #9e9e85; /* botón principal */
+  --color-boton-hover: #a7987d; /* botón hover */
+  --color-fondo-footer: #f3f1ea; /* beige grisáceo claro */
+  --overlay-suave: rgba(255, 253, 248, 0.6); /* filtro portada */
+  --overlay-suave-footer: rgba(255, 253, 248, 0.3); /* filtro footer */
+}
+
+/* ---------------------------- */
+/* 🔤 TIPOGRAFÍA GENERAL        */
+/* ---------------------------- */
+body {
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ---------------------------- */
+/* 🖼️ SECCIÓN HERO (Portada)   */
+/* ---------------------------- */
+.portada {
+  background-image: url("assets/parejitacasamiento.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.portada-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.portada::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-suave);
+  z-index: 1;
+}
+
+/* Frases */
+.frase {
+  background-color: var(--color-fondo-footer);
+  color: var(--color-texto-secundario);
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.frase::before {
+  content: "❝";
+  font-size: 50px;
+  color: var(--color-acento);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.frase::after {
+  content: "❞";
+  font-size: 50px;
+  color: var(--color-acento);
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+}
+
+blockquote {
+  font-family: "Crimson Pro", serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: var(--color-fondo-principal);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-boton-hover);
+  transform: scale(1.05);
+}
+
+/* Animación de frases */
+.frase {
+  animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: var(--color-fondo-footer);
+  font-size: 20px;
+  color: var(--color-texto-principal);
+  font-family: "Cormorant Garamond", serif;
+}
