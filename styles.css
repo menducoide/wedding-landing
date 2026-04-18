@@ -32,6 +32,14 @@
   font-display: swap;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
 /* ---------------------------- */
 /* 🔤 TIPOGRAFÍA GENERAL        */
 /* ---------------------------- */
@@ -234,6 +242,52 @@ footer {
   /* adjust color */
 }
 
+.detalle-item-date {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.lblDM {
+  border-top: 3px solid #4a4036;
+  border-bottom: 3px solid #4a4036;
+  font-size: 24px;
+  width: 30%;
+}
+
+.lblD {
+  font-size: 44px;
+  width: 40%;
+}
+
+.weddingDate {
+  margin-top: 25px;
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6px;
+
+}
+
+.map-link {
+  color: #6b5e54;
+  text-decoration: none;
+}
+
+.paper-polaroid {
+  background: #fff;
+  padding: 12px 12px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+  transform: rotate(-1.5deg);
+  height: 100vh;
+  width: 100%;
+}
+
 /* Countdown */
 .countdown {
   display: grid;
@@ -310,7 +364,7 @@ footer {
 
 .music-btn {
   position: fixed;
-  
+
   top: 20px;
   right: 20px;
   font-size: 32px;
@@ -329,12 +383,13 @@ footer {
 }
 
 #youtube-player {
- 
-position: absolute;
+
+  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  opacity: 0.01; /* important for iOS */
+  opacity: 0.01;
+  /* important for iOS */
 
 }
 
@@ -356,7 +411,7 @@ position: absolute;
   opacity: 1;
 }
 
- 
+
 
 #spinner {
   position: fixed;
