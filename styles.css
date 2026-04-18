@@ -2,16 +2,34 @@
 /* 🎨 PALETA DE COLORES (VARIABLES)   */
 /* ---------------------------------- */
 :root {
-  --color-fondo-principal: #fffdf8; /* blanco marfil */
-  --color-texto-principal: #4a4036; /* marrón oscuro refinado */
-  --color-texto-secundario: #6b5e54; /* marrón cálido */
-  --color-acento: #b5a78a; /* beige neutro profundo */
-  --color-fondo-secundario: #c3c2aa; /* beige oliva */
-  --color-boton: #9e9e85; /* botón principal */
-  --color-boton-hover: #a7987d; /* botón hover */
-  --color-fondo-footer: #f3f1ea; /* beige grisáceo claro */
-  --overlay-suave: rgba(255, 253, 248, 0.6); /* filtro portada */
-  --overlay-suave-footer: rgba(255, 253, 248, 0.3); /* filtro footer */
+  --color-fondo-principal: #fffdf8;
+  /* blanco marfil */
+  --color-texto-principal: #4a4036;
+  /* marrón oscuro refinado */
+  --color-texto-secundario: #6b5e54;
+  /* marrón cálido */
+  --color-acento: #b5a78a;
+  /* beige neutro profundo */
+  --color-fondo-secundario: #c3c2aa;
+  /* beige oliva */
+  --color-boton: #9e9e85;
+  /* botón principal */
+  --color-boton-hover: #a7987d;
+  /* botón hover */
+  --color-fondo-footer: #f3f1ea;
+  /* beige grisáceo claro */
+  --overlay-suave: rgba(255, 253, 248, 0.6);
+  /* filtro portada */
+  --overlay-suave-footer: rgba(255, 253, 248, 0.3);
+  /* filtro footer */
+}
+
+@font-face {
+  font-family: "Bridget Script";
+  src: url("assets/Bridget-Script.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ---------------------------- */
@@ -25,6 +43,14 @@ body {
   color: var(--color-texto-principal);
   text-align: center;
   line-height: 1.6;
+}
+
+section {
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  margin-bottom: 24px;
+
 }
 
 /* ---------------------------- */
@@ -50,6 +76,33 @@ body {
 }
 
 .portada::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-suave);
+  z-index: 1;
+}
+
+.footer {
+  background-image: url("assets/img_3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.footer-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -122,6 +175,7 @@ blockquote {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -135,4 +189,139 @@ footer {
   font-size: 20px;
   color: var(--color-texto-principal);
   font-family: "Cormorant Garamond", serif;
+}
+
+.portada {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.wedding-mark {
+  width: 90vw;
+  /* iPhone 15 friendly */
+  height: 600px;
+}
+
+.wedding-mark .arc {
+
+  font-size: 16px;
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+  fill: #2a1e16;
+  /* adjust color */
+}
+
+.wedding-mark .names {
+  font-family: "Bridget Script", cursive;
+  /* font-family: "Ms Madi", cursive; */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  fill: #2a1e16;
+  text-wrap-mode: wrap;
+  /* adjust color */
+}
+
+.wedding-mark .date {
+
+  font-size: 18px;
+  letter-spacing: 1px;
+  fill: #2a1e16;
+  /* adjust color */
+}
+
+/* Countdown */
+.countdown {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+}
+
+.countdown h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: .2px;
+}
+
+.when {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.unit {
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, rgba(162, 74, 42, .06));
+  border: 1px solid rgba(162, 74, 42, .18);
+}
+
+.num {
+  font-size: clamp(22px, 3.2vw, 36px);
+  font-weight: 900;
+  color: var(--accent);
+  margin: 0;
+}
+
+.lbl {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+.copy-icon {
+  cursor: pointer;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: #555;
+}
+
+.copy-icon:hover {
+  color: #000;
+}
+.paper-polaroid {
+  img{
+    height: 800px;
+  }
+
+}
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 9999;
+  color: #333;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+#youtube-player {
+  display: none;
 }

@@ -1,328 +1,289 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUESTRA BODA.Tamara y Matías</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Princess+Sofia&family=Yesteryear&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-	<style>
-	@font-face{
-  font-family: "Bridget Script";
-  src: url("assets/Bridget-Script.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
- .portada{
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 24px 16px;
-  text-align: center;
-}
-/* test */
-.wedding-mark{
-  width: 90vw;  /* iPhone 15 friendly */
-  height: 1000px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAMARA Y MATÍAS ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Princess+Sofia&family=Yesteryear&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+  <script src="https://www.youtube.com/iframe_api"></script>
 
-.wedding-mark .arc{
+  <script>
   
-  font-size: 16px;
-  letter-spacing: 3px;
-  
-  text-transform: uppercase;
-  fill: #2a1e16;            /* adjust color */
-}
+  </script>
 
-.wedding-mark .names{
-  font-family: "Bridget Script", cursive;
-  /* font-family: "Ms Madi", cursive; */
-  font-weight: 400;
-  font-style: normal;
-  font-size: 32px;  
-  fill: #2a1e16;  
-  text-wrap-mode: wrap;          /* adjust color */
-}
+</head>
 
-.wedding-mark .date{
- 
-  font-size: 18px;
-  letter-spacing: 1px;
-  fill: #2a1e16;            /* adjust color */
-}
-  /* Countdown */
-    .countdown{
-      display: grid;
-      gap: 12px;
-      align-items: center;
-    }
-    .countdown h2{
-      margin: 0;
-      font-size: 18px;
-      font-weight: 800;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      letter-spacing: .2px;
-    }
-    .when{
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-    .timer{
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-    .unit{
-      border-radius: 14px;
-      padding: 14px 10px;
-      text-align: center;
-      background: linear-gradient(180deg, #fff, rgba(162,74,42,.06));
-      border: 1px solid rgba(162,74,42,.18);
-    }
-    .num{
-      font-size: clamp(22px, 3.2vw, 36px);
-      font-weight: 900;
-      color: var(--accent);
-      margin: 0;
-    }
-    .lbl{
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-	</style>
-  </head>
-  <body>
-    <!-- Portada -->
-    <!-- <section class="portada" data-aos="fade-in" data-aos-duration="2000"> -->
-      <!-- <div class="portada-content"> -->
-        <!-- <h1>Tamara & Matías</h1> -->
-        <!-- <p>6 de Junio 2026</p> -->
-      <!-- </div> -->
-    <!-- </section> -->
-	<section class="portada" data-aos="fade-in" data-aos-duration="2000">
-  <div class="portada-content">
-    <svg class="wedding-mark" viewBox="0 -50 240 240" role="img"
-     aria-label="Nuestra boda. Tamara y Matías. 6 June 2026.">
-  <defs>
-    <!-- Top semi-circle path moved 100px up (y: 145 -> 45) -->
-    <path id="topArc" d="M 30 180 A 90 90 0 0 1 210 180" />
-  </defs>
+<body>
+  <!-- Portada -->
+  <!-- <section class="portada" data-aos="fade-in" data-aos-duration="2000"> -->
+  <!-- <div class="portada-content"> -->
+  <!-- <h1>Tamara & Matías</h1> -->
+  <!-- <p>6 de Junio 2026</p> -->
+  <!-- </div> -->
+  <!-- </section> -->
 
-  <!-- Semi-circle text -->
-  <text class="arc">
-    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
-      NUESTRA BODA
-    </textPath>
-  </text>
+  <section class="portada" data-aos="fade-in" data-aos-duration="2000">
 
-  <!-- Names -->
-  <text x="120" y="160" text-anchor="middle" class="names">
-    Tamara &amp; Matías
-  </text>
+    <span id="musicBtn" class="material-symbols-outlined music-btn" onclick="toggleMusic()">
+      volume_off
+    </span>
+    <div id="youtube-player"></div>
+    <div class="portada-content">
+      <svg class="wedding-mark" viewBox="0 -50 240 240" role="img"
+        aria-label="Nuestra boda. Tamara y Matías. 6 June 2026.">
+        <defs>
+          <!-- Top semi-circle path moved 100px up (y: 145 -> 45) -->
+          <path id="topArc" d="M 30 180 A 90 90 0 0 1 210 180" />
+        </defs>
 
-  <!-- Date -->
-  <text x="120" y="200" text-anchor="middle" class="date">
-    06.06.2026
-  </text>
-</svg>
-  </div>
-</section>
+        <!-- Semi-circle text -->
+        <text class="arc">
+          <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+            NUESTRA BODA
+          </textPath>
+        </text>
 
-    <!-- Frase inicial -->
-    <section class="frase" data-aos="fade-up" data-aos-duration="1500">
-      <blockquote>
-        "El amor no se mira, se siente, y aún más cuando estamos juntos."
-      </blockquote>
-    </section> 
-	
-	<section class="contador" data-aos="fade-up" data-aos-duration="1500">
-	 <h2>¡Falta poco para nuestro gran día!</h2>
-        <div class="card countdown" aria-live="polite">
-        <div class="timer" role="group" aria-label="Tiempo restante">
-          <div class="unit"><p class="num" id="d">0</p><p class="lbl">Días</p></div>
-          <div class="unit"><p class="num" id="h">0</p><p class="lbl">Horas</p></div>
-          <div class="unit"><p class="num" id="m">0</p><p class="lbl">Min</p></div>
-          <div class="unit"><p class="num" id="s">0</p><p class="lbl">Seg</p></div>
+        <!-- Names -->
+        <text x="120" y="160" text-anchor="middle" class="names">
+          Tamara &amp; Matías
+        </text>
+
+        <!-- Date -->
+        <text x="120" y="200" text-anchor="middle" class="date">
+          06.06.2026
+        </text>
+      </svg>
+    </div>
+  </section>
+  <section class="detalles" data-aos="fade-right" data-aos-duration="1200">
+    <div class="detalle-item detalle-item-date " style="text-align: center;">
+      <div class="weddingDate"><span class="lblDM">Sabado</span><span class="lblD">06</span><span
+          class="lblDM">Junio</span></div>
+    </div>
+    <div class="detalle-item">
+      <h3>Ceremonia</h3>
+      <span class="material-symbols-outlined">
+        church
+      </span>
+      <p>Basílica San Vicente Ferrer, 19:30 hs</p>
+
+      <p>
+
+        <a class="map-link" href="https://maps.app.goo.gl/a2ZK3vzprowz7o3D8?g_st=iw" target="_blank">
+          <span class="material-symbols-outlined">
+            location_on
+          </span>
+          Lavalle 60, Godoy Cruz, Mendoza
+        </a>
+      </p>
+    </div>
+    <div class="detalle-item">
+      <h3>Fiesta</h3>
+      <span class="material-symbols-outlined">
+        nightlife
+      </span>
+      <p>Salón Vi Aurelia, 21:00 hs</p>
+
+      <p>
+        <a class="map-link" href="https://maps.app.goo.gl/PqTCrkmUEcKSzGK6A?g_st=iw" target="_blank">
+          <span class="material-symbols-outlined">
+            location_on
+          </span>
+          Ruta panamericana 2987, Chacras de Coria, Mendoza
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section class="contador" data-aos="fade-up" data-aos-duration="1500">
+    <h2>¡Falta poco para nuestro gran día!</h2>
+    <div class="card countdown" aria-live="polite">
+      <div class="timer" role="group" aria-label="Tiempo restante">
+        <div class="unit">
+          <p class="num" id="d">0</p>
+          <p class="lbl">Días</p>
+        </div>
+        <div class="unit">
+          <p class="num" id="h">0</p>
+          <p class="lbl">Horas</p>
+        </div>
+        <div class="unit">
+          <p class="num" id="m">0</p>
+          <p class="lbl">Min</p>
+        </div>
+        <div class="unit">
+          <p class="num" id="s">0</p>
+          <p class="lbl">Seg</p>
         </div>
       </div>
+    </div>
 
-    </section>
- 
+  </section>
 
-    <!-- Detalles de la boda -->
-    <section class="detalles" data-aos="fade-right" data-aos-duration="1200">
-      <div class="detalle-item">
-        <h3>Ceremonia</h3>
-        <p>Parroquia San José, 17:00 hs</p>
+  <style>
+    .detalle-item-date {
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+    .lblDM {
+      border-top: 3px solid #4a4036;
+      border-bottom: 3px solid #4a4036;
+      font-size: 24px;
+      width: 30%;
+    }
+
+    .lblD {
+      font-size: 44px;
+      width: 40%;
+    }
+
+    .weddingDate {
+      margin-top: 25px;
+      display: flex;
+      width: 70%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      justify-content: space-around;
+      align-items: center;
+      gap: 6px;
+
+    }
+
+    .map-link {
+      color: #6b5e54;
+      text-decoration: none;
+    }
+
+    .paper-polaroid {
+      background: #fff;
+      padding: 12px 12px 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+      transform: rotate(-1.5deg);
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+  <!-- Detalles de la boda -->
+
+  <!-- Frase intermedia -->
+  <section class="detalles" data-aos="fade-left" data-aos-duration="1500">
+
+    <div class="paper-polaroid">
+      <img src="assets/img_1.jpg" alt="Photo">
+    </div>
+
+  </section>
+
+
+  <section class="frase" data-aos="fade-left" data-aos-duration="1500">
+    <blockquote>
+      "Nuestro destino es amarnos, nuestro camino es hacerlo juntos."
+    </blockquote>
+  </section>
+  <section class="detalles" data-aos="fade-left" data-aos-duration="1500">
+
+    <div class="detalle-item">
+      <h3>Dress code - Elegante</h3>
+      <span class="material-symbols-outlined">
+        checkroom
+      </span>
+      <p>Recordá que el blanco esta reservado para la novia.</p>
+    </div>
+
+  </section>
+
+  <!-- Confirmación -->
+  <section class="confirmacion" data-aos="fade-up" data-aos-duration="1500">
+    <h3>¿Podés venir?</h3>
+    <a href="https://forms.gle/dSTzkgjnVLuUM73C9" target="_blank" class="btn">Confirmar</a>
+    <p>No te olvides de confirmar asistencia antes del 20 de mayo</p>
+  </section>
+
+  <section class="detalles" data-aos="fade-left" data-aos-duration="1500">
+
+    <div class="detalle-item">
+      <h3>Mesa de regalos</h3>
+      <span class="material-symbols-outlined">
+        featured_seasonal_and_gifts
+      </span>
+      <p>Tu presencia es lo ams importante, pero si deseas hacernos un regalo podrías ayudarnos con nuestra luna de miel
+      </p>
+      <p>Alias:</p>
+      <p><strong id="aliasText">muro.escavo.yudo.mp</strong>
+        <span class="material-symbols-outlined copy-icon" onclick="copiarAlias()" title="Copiar alias">
+          content_copy
+        </span>
+      </p>
+    </div>
+
+  </section>
+  <!-- Frase intermedia -->
+  <section class="detalles" data-aos="fade-left" data-aos-duration="1500">
+    <div class="footer">
+      <div class="footer-content">
+        <svg class="wedding-mark" viewBox="0 -50 240 240" role="img"
+          aria-label="Nuestra boda. Tamara y Matías. 6 June 2026.">
+          <defs>
+            <!-- Top semi-circle path moved 100px up (y: 145 -> 45) -->
+            <path id="topArc" d="M 30 200 A 90 90 0 0 1 210 200" />
+          </defs>
+
+          <!-- Semi-circle text -->
+          <text class="arc">
+            <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+              TE ESPERAMOS
+            </textPath>
+          </text>
+
+          <!-- Names -->
+          <text x="120" y="200" text-anchor="middle" class="names">
+            Tamara &amp; Matías
+          </text>
+
+          <!-- Date -->
+          <text x="120" y="240" text-anchor="middle" class="date">
+            06.06.2026
+          </text>
+        </svg>
       </div>
-      <div class="detalle-item">
-        <h3>Fiesta</h3>
-        <p>Salón Los Robles, 20:00 hs</p>
-      </div>
-    </section>
+    </div>
 
-    <!-- Frase intermedia -->
-    <section class="frase" data-aos="fade-left" data-aos-duration="1500">
-      <blockquote>
-        "Nuestro destino es amarnos, nuestro camino es hacerlo juntos."
-      </blockquote>
-    </section>
+  </section>
 
-    <!-- Mapa -->
-    <section class="mapa" data-aos="fade-up" data-aos-duration="1200">
-      <h3>Ubicación de la Iglesia</h3>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.1095390388914!2d-58.46801092484317!3d-34.6527754600417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9c81b10d193%3A0x2b3b3d5de4cdb2f5!2sParroquia%20San%20Jos%C3%A9!5e0!3m2!1ses!2sar!4v1716838283892!5m2!1ses!2sar"
-        width="100%"
-        height="400"
-        style="border: 0; border-radius: 12px"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </section>
 
-    <!-- Confirmación -->
-    <section class="confirmacion" data-aos="fade-up" data-aos-duration="1500">
-      <h3>¿Podés venir?</h3>
-      <a href="https://wa.me/549xxxxxxxxxx" target="_blank" class="btn"
-        >Confirmar</a
-      >
-    </section>
-
-    <!-- Footer -->
-    <footer data-aos="zoom-in" data-aos-duration="1500">
-      <p>¡Te esperamos con mucha ilusión!</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="functions.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-	<script>
-	 <script>
-    // ====== EDITA ESTO ======
-    // Fecha en formato ISO (incluye zona horaria para evitar confusiones)
-    // Ej: "2026-09-12T16:00:00-03:00"
-    const WEDDING_DATE = "2026-09-12T16:00:00-03:00";
-
-    const GOOGLE_FORM_URL = "https://forms.gle/PUT_YOUR_FORM_LINK_HERE";
-
-    // Tus fotos (ideal si tienen tonos otoñales: marrones, dorados, etc.)
-    const photos = [
-      { src: "https://images.unsplash.com/photo-1523438097201-512ae7d59a0b?auto=format&fit=crop&w=1600&q=80", caption: "Otoño 1" },
-      { src: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=1600&q=80", caption: "Otoño 2" },
-      { src: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80", caption: "Otoño 3" }
-    ];
-
-    // Opcional: links de mapas (si quieres cambiarlos desde aquí)
-    const CHURCH_MAP_URL = "https://maps.google.com/?q=Parroquia%20Santa%20Maria";
-    const VENUE_MAP_URL  = "https://maps.google.com/?q=Salon%20Otono";
-    // ========================
-
-    // RSVP link
-    document.getElementById("rsvpLink").href = GOOGLE_FORM_URL;
-
-    // Map links
-    document.getElementById("churchMapLink").href = CHURCH_MAP_URL;
-    document.getElementById("venueMapLink").href = VENUE_MAP_URL;
-
-    // Footer note
-    document.getElementById("footerNote").textContent =
-      "Si tienes dudas, responde al mensaje de invitación.";
-
-    // Countdown
-    const wedding = new Date(WEDDING_DATE);
-    const weddingWhen = document.getElementById("weddingWhen");
-    weddingWhen.textContent = `Fecha: ${wedding.toLocaleString([], { dateStyle: "full", timeStyle: "short" })}`;
-
-    const elD = document.getElementById("d");
-    const elH = document.getElementById("h");
-    const elM = document.getElementById("m");
-    const elS = document.getElementById("s");
-
-    function tick(){
-      const now = new Date();
-      const diff = wedding.getTime() - now.getTime();
-
-      if (diff <= 0){
-        elD.textContent = "0"; elH.textContent = "0"; elM.textContent = "0"; elS.textContent = "0";
-        weddingWhen.textContent = "¡Hoy es el gran día!";
-        return;
-      }
-
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-
-      elD.textContent = String(days);
-      elH.textContent = String(hours).padStart(2, "0");
-      elM.textContent = String(minutes).padStart(2, "0");
-      elS.textContent = String(seconds).padStart(2, "0");
-    }
-    tick();
-    setInterval(tick, 1000);
-
-    // Carousel
-    let idx = 0;
-    const slide = document.getElementById("slide");
-    const caption = document.getElementById("photoCaption");
-    const dots = document.getElementById("dots");
-
-    function renderDots(){
-      dots.innerHTML = "";
-      photos.forEach((_, i) => {
-        const b = document.createElement("button");
-        b.className = "dot" + (i === idx ? " active" : "");
-        b.setAttribute("aria-label", `Mostrar foto ${i + 1}`);
-        b.addEventListener("click", () => { idx = i; show(); renderDots(); });
-        dots.appendChild(b);
-      });
-    }
-
-    function show(){
-      const p = photos[idx];
-      slide.src = p.src;
-      slide.alt = p.caption || `Foto ${idx + 1}`;
-      caption.textContent = p.caption || "";
-    }
-
-    document.getElementById("prev").addEventListener("click", () => {
-      idx = (idx - 1 + photos.length) % photos.length;
-      show(); renderDots();
-    });
-
-    document.getElementById("next").addEventListener("click", () => {
-      idx = (idx + 1) % photos.length;
-      show(); renderDots();
-    });
-
-    renderDots();
-    show();
+  <!-- Scripts -->
+  <script src="functions.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
-	</script>
-  </body>
-  
+
+
+</body>
+
 </html>
