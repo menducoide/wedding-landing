@@ -263,13 +263,13 @@ footer {
 }
 
 .unit {
-  border-radius: 14px;
-  padding: 14px 10px;
-  text-align: center;
-  background: linear-gradient(180deg, #fff, rgba(162, 74, 42, .06));
-  border: 1px solid rgba(162, 74, 42, .18);
+  border-top: 1px solid #4a4036;
+  border-bottom: 1px solid #4a4036;
+  font-size: 24px;
 }
-
+.contador {
+  padding-bottom: 24px;
+}
 .num {
   font-size: clamp(22px, 3.2vw, 36px);
   font-weight: 900;
@@ -298,12 +298,14 @@ footer {
 .copy-icon:hover {
   color: #000;
 }
+
 .paper-polaroid {
-  img{
+  img {
     height: 800px;
   }
 
 }
+
 .music-btn {
   position: fixed;
   bottom: 20px;
@@ -315,7 +317,7 @@ footer {
   background: #fff;
   border-radius: 50%;
   padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
 }
 
 .music-btn:hover {
