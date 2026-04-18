@@ -55,9 +55,9 @@ function showPopup() {
 }
 
 
-let player;
-let musicOn = false;
-let playerReady = false;
+var player;
+var musicOn = false;
+var playerReady = false;
 
 function onYouTubeIframeAPIReady() {
   try {

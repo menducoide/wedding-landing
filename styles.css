@@ -267,9 +267,11 @@ footer {
   border-bottom: 1px solid #4a4036;
   font-size: 24px;
 }
+
 .contador {
   padding-bottom: 24px;
 }
+
 .num {
   font-size: clamp(22px, 3.2vw, 36px);
   font-weight: 900;
@@ -308,7 +310,8 @@ footer {
 
 .music-btn {
   position: fixed;
-  bottom: 20px;
+  
+  top: 20px;
   right: 20px;
   font-size: 32px;
   cursor: pointer;
@@ -317,6 +320,7 @@ footer {
   background: #fff;
   border-radius: 50%;
   padding: 10px;
+  margin-right: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
 }
 
@@ -327,6 +331,7 @@ footer {
 #youtube-player {
   display: none;
 }
+
 .popup {
   position: fixed;
   bottom: 30px;
@@ -345,11 +350,15 @@ footer {
   opacity: 1;
 }
 
+ 
 
 #spinner {
   position: fixed;
   inset: 0;
   background: rgba(255, 255, 255, 0.85);
+  top: 20px;
+  right: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
