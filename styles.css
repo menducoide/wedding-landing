@@ -329,7 +329,13 @@ footer {
 }
 
 #youtube-player {
-  display: none;
+ 
+position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0.01; /* important for iOS */
+
 }
 
 .popup {

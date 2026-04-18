@@ -93,13 +93,13 @@ function onPlayerReady(event) {
 
 }
 
+const btn = document.getElementById("musicBtn");
 function toggleMusic() {
   if (!playerReady) {
     console.warn("Player no listo todavía");
     return;
   }
 
-  const btn = document.getElementById("musicBtn");
 
   if (!musicOn) {
     player.playVideo();
@@ -114,4 +114,20 @@ function toggleMusic() {
 }
 
 
+
+// Use pointerdown OR touchstart
+btn.addEventListener("pointerdown", () => {
+  if (!playerReady) return;
+
+  if (!musicOn) {
+    player.playVideo();   // must be FIRST
+    player.unMute();      // after play
+    btn.textContent = "volume_up";
+    musicOn = true;
+  } else {
+    player.pauseVideo();
+    btn.textContent = "volume_off";
+    musicOn = false;
+  }
+});
 
