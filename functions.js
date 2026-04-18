@@ -16,7 +16,6 @@ function tick() {
 
   if (diff <= 0) {
     elD.textContent = "0"; elH.textContent = "0"; elM.textContent = "0"; elS.textContent = "0";
-    weddingWhen.textContent = "¡Hoy es el gran día!";
     return;
   }
 
@@ -35,42 +34,59 @@ tick();
 setInterval(tick, 1000);
 
 
-function copiarAlias() {
-  const alias = document.getElementById("aliasText").innerText;
-  console.log(alias)
-  navigator.clipboard.writeText(alias)
-    .then(() => {
-      console.log("Alias copiado");
-    })
-    .catch(err => {
-      console.error("Error al copiar: ", err);
-    });
+const alias = document.getElementById("aliasText").innerText;
+const button = document.getElementById("copyAliasBtn");
+const popup = document.getElementById("popup");
+
+button.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(alias);
+    showPopup();
+  } catch (err) {
+    alert("Error al copiar el alias");
+  }
+});
+
+function showPopup() {
+  popup.classList.add("show");
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 2500);
 }
+
 
 let player;
 let musicOn = false;
 let playerReady = false;
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtube-player', {
-    height: '0',
-    width: '0',
-    videoId: 'nSDgHBxUbVQ',
-    playerVars: {
-      autoplay: 0,
-      controls: 0,
-      loop: 1,
-      playlist: 'nSDgHBxUbVQ',
-      modestbranding: 1
-    },
-    events: {
-      onReady: onPlayerReady
-    }
-  });
+  try {
+    document.getElementById("musicBtn").style.display = "none";
+    player = new YT.Player('youtube-player', {
+      height: '0',
+      width: '0',
+      videoId: 'nSDgHBxUbVQ',
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+        loop: 1,
+        playlist: 'nSDgHBxUbVQ',
+        modestbranding: 1
+      },
+      events: {
+        onReady: onPlayerReady
+      }
+    });
+  } catch (error) {
+    document.getElementById("spinner").style.display = "none";
+  }
+
 }
 
 function onPlayerReady(event) {
   playerReady = true;
+  document.getElementById("spinner").style.display = "none";
+  document.getElementById("musicBtn").style.display = "block";
   event.target.setVolume(40); // 🔊 fuerza volumen
 }
 
@@ -92,4 +108,6 @@ function toggleMusic() {
 
   musicOn = !musicOn;
 }
+
+
 

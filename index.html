@@ -28,7 +28,7 @@
   <script src="https://www.youtube.com/iframe_api"></script>
 
   <script>
-  
+
   </script>
 
 </head>
@@ -47,6 +47,10 @@
     <span id="musicBtn" class="material-symbols-outlined music-btn" onclick="toggleMusic()">
       volume_off
     </span>
+    <div id="spinner">
+      <div class="loader"></div>
+    </div>
+
     <div id="youtube-player"></div>
     <div class="portada-content">
       <svg class="wedding-mark" viewBox="0 -50 240 240" role="img"
@@ -117,26 +121,26 @@
 
   <section class="contador" data-aos="fade-up" data-aos-duration="1500">
     <h3>¡Falta poco para nuestro gran día!</h2>
-    <div class="card countdown" aria-live="polite">
-      <div class="timer" role="group" aria-label="Tiempo restante">
-        <div class="unit">
-          <p class="num" id="d">0</p>
-          <p class="lbl">Días</p>
-        </div>
-        <div class="unit">
-          <p class="num" id="h">0</p>
-          <p class="lbl">Horas</p>
-        </div>
-        <div class="unit">
-          <p class="num" id="m">0</p>
-          <p class="lbl">Min</p>
-        </div>
-        <div class="unit">
-          <p class="num" id="s">0</p>
-          <p class="lbl">Seg</p>
+      <div class="card countdown" aria-live="polite">
+        <div class="timer" role="group" aria-label="Tiempo restante">
+          <div class="unit">
+            <p class="num" id="d">0</p>
+            <p class="lbl">Días</p>
+          </div>
+          <div class="unit">
+            <p class="num" id="h">0</p>
+            <p class="lbl">Horas</p>
+          </div>
+          <div class="unit">
+            <p class="num" id="m">0</p>
+            <p class="lbl">Min</p>
+          </div>
+          <div class="unit">
+            <p class="num" id="s">0</p>
+            <p class="lbl">Seg</p>
+          </div>
         </div>
       </div>
-    </div>
 
   </section>
 
@@ -220,7 +224,7 @@
   <section class="confirmacion" data-aos="fade-up" data-aos-duration="1500">
     <h3>¿Podés venir?</h3>
     <a href="https://forms.gle/dSTzkgjnVLuUM73C9" target="_blank" class="btn">Confirmar</a>
-    <p>No te olvides de confirmar asistencia antes del 20 de mayo</p>
+    <p>No te olvides de confirmar asistencia antes del <b>20 de mayo</b></p>
   </section>
 
   <section class="detalles" data-aos="fade-left" data-aos-duration="1500">
@@ -230,14 +234,20 @@
       <span class="material-symbols-outlined">
         featured_seasonal_and_gifts
       </span>
-      <p>Tu presencia es lo ams importante, pero si deseas hacernos un regalo podrías ayudarnos con nuestra luna de miel
+      <p>Tu presencia es lo más importante, pero si deseas hacernos un regalo, podrías ayudarnos con nuestra luna de
+        miel.
       </p>
       <p>Alias:</p>
       <p><strong id="aliasText">muro.escavo.yudo.mp</strong>
-        <span class="material-symbols-outlined copy-icon" onclick="copiarAlias()" title="Copiar alias">
+        <span id="copyAliasBtn" class="material-symbols-outlined copy-icon" onclick="copiarAlias()"
+          title="Copiar alias">
           content_copy
         </span>
       </p>
+      <div id="popup" class="popup">
+        Alias copiado correctamente!
+      </div>
+
     </div>
 
   </section>
