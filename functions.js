@@ -63,15 +63,16 @@ function onYouTubeIframeAPIReady() {
   try {
     document.getElementById("musicBtn").style.display = "none";
     player = new YT.Player('youtube-player', {
-      height: '0',
-      width: '0',
+      height: '1',
+      width: '1',
       videoId: 'nSDgHBxUbVQ',
       playerVars: {
         autoplay: 0,
         controls: 0,
         loop: 1,
         playlist: 'nSDgHBxUbVQ',
-        modestbranding: 1
+        modestbranding: 1,
+        playsinline: 1
       },
       events: {
         onReady: onPlayerReady
@@ -87,7 +88,9 @@ function onPlayerReady(event) {
   playerReady = true;
   document.getElementById("spinner").style.display = "none";
   document.getElementById("musicBtn").style.display = "block";
-  event.target.setVolume(40); // 🔊 fuerza volumen
+  event.target.mute();
+  event.target.setVolume(40);
+
 }
 
 function toggleMusic() {
@@ -99,7 +102,8 @@ function toggleMusic() {
   const btn = document.getElementById("musicBtn");
 
   if (!musicOn) {
-    player.playVideo();     // 🔑 debe ejecutarse DESPUÉS de ready
+    player.playVideo();
+    player.unMute();
     btn.textContent = "volume_up";
   } else {
     player.pauseVideo();
